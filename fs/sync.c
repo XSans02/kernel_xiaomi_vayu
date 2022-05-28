@@ -166,7 +166,7 @@ SYSCALL_DEFINE1(syncfs, int, fd)
 	ret = sync_filesystem(sb);
 	up_read(&sb->s_umount);
 
-	ret2 = errseq_check_and_advance(&sb->s_wb_err, &f.file->f_sb_err);
+	ret2 = errseq_check_and_advance(&sb->s_wb_err, &f.file->f_wb_err);
 
 	fdput(f);
 	return ret ? ret : ret2;
