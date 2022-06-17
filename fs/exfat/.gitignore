@@ -9,6 +9,7 @@
 #
 # Normal rules (sorted alphabetically)
 #
+out/*
 .*
 *.a
 *.asn1.[ch]
@@ -65,11 +66,6 @@ modules.builtin
 # RPM spec file (make rpm-pkg)
 #
 /*.spec
-
-#
-# Debian directory (make deb-pkg)
-#
-/debian/
 
 #
 # Snap directory (make snap-pkg)
